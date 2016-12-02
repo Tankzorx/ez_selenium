@@ -1,5 +1,5 @@
 {
-  "name": "seleniummodule",
+  "name": "ez_selenium",
   "version": "1.0.0",
   "description": "A library that exposes a subset of the selenium functionality, in a manner that allows for very readable tests.",
   "main": "index.js",
