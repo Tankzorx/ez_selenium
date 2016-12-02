@@ -1,0 +1,15 @@
+{
+  "name": "seleniummodule",
+  "version": "1.0.0",
+  "description": "A library that exposes a subset of the selenium functionality, in a manner that allows for very readable tests.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gustav Jonsson",
+  "license": "ISC",
+  "dependencies": {
+    "async": "^2.1.4",
+    "selenium-webdriver": "^3.0.1"
+  }
+}
