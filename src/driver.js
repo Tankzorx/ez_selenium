@@ -175,6 +175,14 @@ class actionDriver {
         return this;
     }
 
+    waitFor(elem, timeout) {
+        this.actions.push((next) => {
+            elem.click().then(next, this.error);
+        });
+        return this;
+    }
+
+
     /*
      * Add a completely custom action to the action list.
      * The provided action must take a callback function as input.
