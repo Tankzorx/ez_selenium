@@ -175,9 +175,12 @@ class actionDriver {
         return this;
     }
 
-    waitFor(elem, timeout) {
+    waitFor(xpath, timeout) {
         this.actions.push((next) => {
-            elem.click().then(next, this.error);
+            this.driver.wait(until.elementLocated(By.xpath(xpath)), timeout || this.defaultTimeout)
+                .then((elem) => {
+                next();
+            }, this.error);
         });
         return this;
     }
