@@ -1,6 +1,6 @@
 {
   "name": "ez_selenium",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "A library that exposes a subset of the selenium functionality, in a manner that allows for very readable tests.",
   "main": "index.js",
   "scripts": {
