@@ -194,6 +194,7 @@ class actionDriver {
         this.actions.push((next) => {
             func(this.driver,next);
         });
+        return this.driver;
     }
 }
 module.exports = actionDriver;
