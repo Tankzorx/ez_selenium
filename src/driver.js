@@ -147,6 +147,24 @@ class actionDriver {
         return this;
     }
 
+    getElement(xpath, allowSkip, cb, timeout) {
+        this.actions.push((next) => {
+            this.driver.wait(until.elementLocated(By.xpath(xpath)), timeout || this.defaultTimeout)
+                .then((elems) => {
+                cb(elem, next);
+            }, (e) => {
+                if (allowSkip) {
+                    cb(null, next);
+                }
+                else {
+                    this.error(e);
+                }
+            });
+        });
+        return this;
+    }
+
+
     /*
      * Get the text from an element and its sub-elements. The result is
      * concatenated
